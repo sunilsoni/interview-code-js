@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Main container */
+main {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Title */
+.accordion-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Accordion Container */
+.accordion {
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Title Section */
+.accordion .title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Description Section */
+.accordion .description {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+    font-size: 1em;
+}
+
+/* Expand and Collapse Icons */
+.accordion .title-section .expand-icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url('./icons/down-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accordion .title-section .collapse-icon {
+    display: none;
+    height: 20px;
+    width: 20px;
+    background-image: url('./icons/up-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Multi-Select Checkbox */
+.multi-select {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.multi-select label {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.multi-select input {
+    margin-right: 5px;
+}

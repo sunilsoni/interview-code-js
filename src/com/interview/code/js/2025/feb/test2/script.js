@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const mobile = mobileInput.value.trim();
         const email = emailInput.value.trim();
 
+        if (!name || !mobile || !email) {
+            showError("All fields are required!");
+            return;
+        }
+
         if (!validateName(name)) {
             showError("Invalid Name: Only letters & spaces, max 20 chars");
             return;
