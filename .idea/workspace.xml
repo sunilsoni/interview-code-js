@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/style.css" afterDir="false" />
+    <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks">
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/directionRight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/gatherSticks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/cityLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/updateLap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,8 +58,15 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.cityLine.js.executor": "Run",
+    "Node.js.directionRight.js.executor": "Run",
+    "Node.js.gatherSticks.js.executor": "Run",
     "Node.js.index.ts.executor": "Run",
+    "Node.js.solution.js.executor": "Run",
+    "Node.js.solution1.js.executor": "Run",
+    "Node.js.test.js (1).executor": "Run",
     "Node.js.test.js.executor": "Run",
+    "Node.js.updateLap.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -71,17 +81,29 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.test.js">
-    <configuration name="index.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/index.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/src">
+  <component name="RunManager" selected="Node.js.cityLine.js">
+    <configuration name="cityLine.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/cityLine.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
       <method v="2" />
     </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1/test.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test1">
+    <configuration name="directionRight.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/directionRight.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3">
+      <method v="2" />
+    </configuration>
+    <configuration name="solution1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution1.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3">
+      <method v="2" />
+    </configuration>
+    <configuration name="solution.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3">
+      <method v="2" />
+    </configuration>
+    <configuration name="updateLap.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/updateLap.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.index.ts" />
+        <item itemvalue="Node.js.cityLine.js" />
+        <item itemvalue="Node.js.updateLap.js" />
+        <item itemvalue="Node.js.solution1.js" />
+        <item itemvalue="Node.js.solution.js" />
+        <item itemvalue="Node.js.directionRight.js" />
       </list>
     </recent_temporary>
   </component>
@@ -101,11 +123,25 @@
       <option name="presentableId" value="Default" />
       <updated>1739026345852</updated>
       <workItem from="1739026346884" duration="2955000" />
-      <workItem from="1739161835541" duration="1594000" />
+      <workItem from="1739161835541" duration="14231000" />
+      <workItem from="1739630608135" duration="2907000" />
     </task>
+    <task id="LOCAL-00001" summary="tasks">
+      <option name="closed" value="true" />
+      <created>1739197799150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739197799150</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="tasks" />
   </component>
 </project>
