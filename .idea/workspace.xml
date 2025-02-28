@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks">
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/moves.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/IndexManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/IndexManager2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/Processor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/Storage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/Storage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +23,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -52,6 +57,9 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.IndexManager.js.executor": "Run",
+    "Node.js.IndexManager2.js.executor": "Run",
+    "Node.js.Storage.js.executor": "Run",
     "Node.js.cityLine.js.executor": "Run",
     "Node.js.directionRight.js.executor": "Run",
     "Node.js.gatherSticks.js.executor": "Run",
@@ -76,29 +84,29 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.moves.js">
+  <component name="RunManager" selected="Node.js.Storage.js">
+    <configuration name="IndexManager2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/IndexManager2.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
+      <method v="2" />
+    </configuration>
+    <configuration name="IndexManager.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/IndexManager.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
+      <method v="2" />
+    </configuration>
+    <configuration name="Storage.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/Storage.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
+      <method v="2" />
+    </configuration>
     <configuration name="cityLine.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/cityLine.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
       <method v="2" />
     </configuration>
     <configuration name="moves.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/moves.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
       <method v="2" />
     </configuration>
-    <configuration name="solution1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution1.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3">
-      <method v="2" />
-    </configuration>
-    <configuration name="solution.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3/solution.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test3">
-      <method v="2" />
-    </configuration>
-    <configuration name="updateLap.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/updateLap.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Storage.js" />
+        <item itemvalue="Node.js.IndexManager2.js" />
+        <item itemvalue="Node.js.IndexManager.js" />
         <item itemvalue="Node.js.moves.js" />
         <item itemvalue="Node.js.cityLine.js" />
-        <item itemvalue="Node.js.updateLap.js" />
-        <item itemvalue="Node.js.solution1.js" />
-        <item itemvalue="Node.js.solution.js" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +129,10 @@
       <workItem from="1739161835541" duration="14231000" />
       <workItem from="1739630608135" duration="4195000" />
       <workItem from="1740142895534" duration="599000" />
-      <workItem from="1740427492813" duration="1839000" />
+      <workItem from="1740427492813" duration="5936000" />
+      <workItem from="1740588263897" duration="614000" />
+      <workItem from="1740670277051" duration="599000" />
+      <workItem from="1740768326755" duration="1935000" />
     </task>
     <task id="LOCAL-00001" summary="tasks">
       <option name="closed" value="true" />
@@ -139,11 +150,24 @@
       <option name="project" value="LOCAL" />
       <updated>1739644536193</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tasks">
+      <option name="closed" value="true" />
+      <created>1740490585095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740490585095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/interview/code/js/2025/feb/test4/Storage.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tasks" />
