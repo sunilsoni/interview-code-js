@@ -19,5 +19,6 @@ function solve1(a, b) {
 
     return result;
 }
+
 console.log(solve1("11", "1"));      // Example #1 -> Output: 100
 console.log(solve1("1010", "1011")); // Example #2 -> Output: 10101

@@ -28,12 +28,12 @@ const isPalindrome = (x) => {
 // Test function
 function runTests() {
     const testCases = [
-        { input: 121, expected: true },
-        { input: -121, expected: false },
-        { input: 10, expected: false },
-        { input: 0, expected: true },
-        { input: 1234321, expected: true },
-        { input: 1000021, expected: false },
+        {input: 121, expected: true},
+        {input: -121, expected: false},
+        {input: 10, expected: false},
+        {input: 0, expected: true},
+        {input: 1234321, expected: true},
+        {input: 1000021, expected: false},
     ];
 
     testCases.forEach((test, index) => {

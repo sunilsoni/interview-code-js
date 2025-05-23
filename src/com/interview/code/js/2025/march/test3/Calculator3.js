@@ -35,6 +35,7 @@ class Calculator {
         return this.result;
     }
 }
+
 // Test cases
 try {
     // Test case 1: Addition

@@ -28,6 +28,7 @@ function solution(cityLine) {
 
     return maxArea;
 }
+
 function main() {
     // Helper to compare actual vs expected
     const check = (cityLine, expected) => {
@@ -39,12 +40,12 @@ function main() {
     };
 
     // Example from the problem:
-    check([1,2,3,2,1], 4);
+    check([1, 2, 3, 2, 1], 4);
     // Because the largest square is 2x2 => area=4
 
     // Another example from the problem:
     // cityLine = [4,3,4] => largest square side is 3 => area=9
-    check([4,3,4], 9);
+    check([4, 3, 4], 9);
 
     // Some edge cases:
     // 1) Single skyscraper
@@ -54,7 +55,7 @@ function main() {
 
     // 2) All same height
     // If cityLine = [5,5,5,5], we have height=5, width=4 => side=4 => area=16
-    check([5,5,5,5], 16);
+    check([5, 5, 5, 5], 16);
 
     // 3) Strictly increasing
     // cityLine = [1,2,3,4]. The widest bar is 4 wide but min height=1 => side=1 => area=1
@@ -67,7 +68,7 @@ function main() {
     // The bar with height=3 can expand only 1 wide, so side=1 => area=1.
     // The bar with height=4 can only expand 1 wide => area=1.
     // The best is area=4.
-    check([1,2,3,4], 4);
+    check([1, 2, 3, 4], 4);
 
     // 4) Strictly decreasing
     // cityLine = [4,3,2,1]. The first bar is 4 but can expand only 1 wide => side=1 => area=1
@@ -75,7 +76,7 @@ function main() {
     // The third bar is 2, can expand only 1 wide => area=1
     // The last bar is 1, can expand 1 wide => area=1
     // Possibly also the bar with height=2 might expand to the bars to the right if they are >=2? But index=3 is 1, which is <2 => no. So area=1 again.
-    check([4,3,2,1], 1);
+    check([4, 3, 2, 1], 1);
 
     // 5) Big test (just for performance check):
     const bigTest = new Array(10_000).fill(1000);

@@ -101,7 +101,7 @@ class IndexManager {
             throw new Error('Invalid block format');
         }
 
-        const { id, book_id, type } = block;
+        const {id, book_id, type} = block;
 
         // Initialize book entry if it doesn't exist
         if (!this.index[book_id]) {
@@ -187,7 +187,6 @@ class IndexManager {
         return this.editionOrder[book_id].map(blockId => this.index[book_id][blockId]);
     }
 }
-
 
 
 // Test function to run all tests

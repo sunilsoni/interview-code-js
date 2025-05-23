@@ -6,20 +6,20 @@ function reverseWords(inputString) {
     let tempWord = '';
 
     // Loop through each character in the input string
-    for(let i = 0; i < inputString.length; i++) {
+    for (let i = 0; i < inputString.length; i++) {
 
         // If current character is not a space, add to tempWord
-        if(inputString[i] !== ' ') {
+        if (inputString[i] !== ' ') {
             tempWord = inputString[i] + tempWord; // Add character at front of tempWord
         }
 
         // If space is encountered OR we reach the end of string
-        if(inputString[i] === ' ' || i === inputString.length - 1) {
+        if (inputString[i] === ' ' || i === inputString.length - 1) {
             // Add the reversed word to result
             result = result + tempWord;
 
             // Add space if it's not the end of string
-            if(i !== inputString.length - 1) {
+            if (i !== inputString.length - 1) {
                 result = result + ' ';
             }
 

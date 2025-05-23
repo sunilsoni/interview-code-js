@@ -81,13 +81,13 @@ function main() {
     const testCases = [
         {
             capacity: 3,
-            commands: ["PUT,11,25","PUT,22,50","PUT,11,75","GET,11","GET,22"],
-            expected: [75,50]
+            commands: ["PUT,11,25", "PUT,22,50", "PUT,11,75", "GET,11", "GET,22"],
+            expected: [75, 50]
         },
         {
             capacity: 2,
-            commands: ["PUT,1,100","PUT,2,125","PUT,2,150","GET,1","GET,2"],
-            expected: [-1,150]
+            commands: ["PUT,1,100", "PUT,2,125", "PUT,2,150", "GET,1", "GET,2"],
+            expected: [-1, 150]
         }
     ];
 

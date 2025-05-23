@@ -70,12 +70,12 @@ class Solution {
     static main() {
         // Define test cases: each with an input array and the expected result.
         const testCases = [
-            { input: [4, 2, 4, 1, 3, 5], expected: 2 },
-            { input: [3, 5, 7, 7], expected: 1 },
-            { input: [1, 5, 6, 10], expected: 0 },
-            { input: [5, 4, 3], expected: 2 },
-            { input: [3, 2, 3], expected: 1 },
-            { input: [1, 1, 1], expected: 2 }
+            {input: [4, 2, 4, 1, 3, 5], expected: 2},
+            {input: [3, 5, 7, 7], expected: 1},
+            {input: [1, 5, 6, 10], expected: 0},
+            {input: [5, 4, 3], expected: 2},
+            {input: [3, 2, 3], expected: 1},
+            {input: [1, 1, 1], expected: 2}
         ];
 
         // Process each test case and output results.

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Accordion Example</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,46 +14,50 @@
 
         <!-- Accordion Items -->
         <div class="accordion" data-testid="1">
-            <div class="title-section" role="button" tabindex="0" aria-controls="desc-1" id="btn-1">
+            <div aria-controls="desc-1" class="title-section" id="btn-1" role="button" tabindex="0">
                 <div class="title">Responsive Web Design with HTML5 and CSS</div>
                 <div class="expand-icon"></div>
                 <div class="collapse-icon"></div>
             </div>
-            <div class="description" id="desc-1" role="region" aria-labelledby="btn-1">
-                Harness the latest capabilities of HTML5 and CSS to create a single UI that works flawlessly on mobile phones, tablets, and desktops.
+            <div aria-labelledby="btn-1" class="description" id="desc-1" role="region">
+                Harness the latest capabilities of HTML5 and CSS to create a single UI that works flawlessly on mobile
+                phones, tablets, and desktops.
             </div>
         </div>
 
         <div class="accordion" data-testid="2">
-            <div class="title-section" role="button" tabindex="0" aria-controls="desc-2" id="btn-2">
+            <div aria-controls="desc-2" class="title-section" id="btn-2" role="button" tabindex="0">
                 <div class="title">Front End Development A Complete Guide</div>
                 <div class="expand-icon"></div>
                 <div class="collapse-icon"></div>
             </div>
-            <div class="description" id="desc-2" role="region" aria-labelledby="btn-2">
-                Would you develop a Front End Development Communication Strategy? Which models, tools, and techniques are necessary?
+            <div aria-labelledby="btn-2" class="description" id="desc-2" role="region">
+                Would you develop a Front End Development Communication Strategy? Which models, tools, and techniques
+                are necessary?
             </div>
         </div>
 
         <div class="accordion" data-testid="3">
-            <div class="title-section" role="button" tabindex="0" aria-controls="desc-3" id="btn-3">
+            <div aria-controls="desc-3" class="title-section" id="btn-3" role="button" tabindex="0">
                 <div class="title">JavaScript and JQuery</div>
                 <div class="expand-icon"></div>
                 <div class="collapse-icon"></div>
             </div>
-            <div class="description" id="desc-3" role="region" aria-labelledby="btn-3">
-                This full-color book will show you how to make your websites more interactive and your interfaces more intuitive.
+            <div aria-labelledby="btn-3" class="description" id="desc-3" role="region">
+                This full-color book will show you how to make your websites more interactive and your interfaces more
+                intuitive.
             </div>
         </div>
 
         <div class="accordion" data-testid="4">
-            <div class="title-section" role="button" tabindex="0" aria-controls="desc-4" id="btn-4">
+            <div aria-controls="desc-4" class="title-section" id="btn-4" role="button" tabindex="0">
                 <div class="title">Creativity in Product Development</div>
                 <div class="expand-icon"></div>
                 <div class="collapse-icon"></div>
             </div>
-            <div class="description" id="desc-4" role="region" aria-labelledby="btn-4">
-                The present book proposes a new descriptive model, the so-called "Ideation Model" (IM), of the design process from a dual cognitive-engineering perspective.
+            <div aria-labelledby="btn-4" class="description" id="desc-4" role="region">
+                The present book proposes a new descriptive model, the so-called "Ideation Model" (IM), of the design
+                process from a dual cognitive-engineering perspective.
             </div>
         </div>
     </div>
@@ -61,7 +65,7 @@
     <!-- Multi-Select Checkbox -->
     <div class="multi-select">
         <label>
-            <input type="checkbox" class="checkbox" id="multiselect" data-testid="multiselect"> Multiple
+            <input class="checkbox" data-testid="multiselect" id="multiselect" type="checkbox"> Multiple
         </label>
     </div>
 </main>

@@ -102,7 +102,7 @@ function createIndexManager() {
             throw new Error('Invalid block format');
         }
 
-        const { id, book_id, type } = block;
+        const {id, book_id, type} = block;
 
         // Initialize book entry if it doesn't exist
         if (!index[book_id]) {

@@ -27,13 +27,13 @@ class PalindromeChecker {
     static main() {
         // Define an array of test cases including edge cases.
         const testCases = [
-            { input: 121, expected: true },      // Basic palindrome: "121"
-            { input: -121, expected: false },     // Negative number: not a palindrome
-            { input: 10, expected: false },       // Not a palindrome because reversed "01" != "10"
-            { input: 0, expected: true },         // Edge case: 0 is a palindrome
-            { input: 12321, expected: true },     // Another palindrome example
+            {input: 121, expected: true},      // Basic palindrome: "121"
+            {input: -121, expected: false},     // Negative number: not a palindrome
+            {input: 10, expected: false},       // Not a palindrome because reversed "01" != "10"
+            {input: 0, expected: true},         // Edge case: 0 is a palindrome
+            {input: 12321, expected: true},     // Another palindrome example
             // Large input example (within JavaScript number limits)
-            { input: 123454321, expected: true }  // Large palindrome number
+            {input: 123454321, expected: true}  // Large palindrome number
         ];
 
         // Iterate over each test case to verify correctness.

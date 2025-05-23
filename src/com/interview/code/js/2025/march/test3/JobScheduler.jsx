@@ -1,5 +1,5 @@
 // JobScheduler.jsx
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 // --- mock‑api helpers --------------------------------------------------------
 const fetchLibraries = () =>
@@ -13,9 +13,9 @@ const fetchJobs = () =>
         setTimeout(
             () =>
                 r([
-                    { name: 'JOBABC' },
-                    { name: 'ORDER1' },
-                    { name: 'BATCH$' },
+                    {name: 'JOBABC'},
+                    {name: 'ORDER1'},
+                    {name: 'BATCH$'},
                 ]),
             300
         )
@@ -25,24 +25,24 @@ const fetchJobs = () =>
 const jobNameRegex = /^[A-Z#@$][A-Z0-9#@$]{5,7}$/; // 6–8 chars, first char rule
 
 const months = [
-    'January','February','March','April','May','June',
-    'July','August','September','October','November','December',
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
 ];
 
-const weekdays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 // --- main component ----------------------------------------------------------
 export default function JobScheduler() {
     return (
-        <div style={{ fontFamily: 'sans-serif', maxWidth: 900, margin: '0 auto', padding: 20 }}>
-            <h2>Add Job Details</h2>
-            <JobDetailsForm />
+        <div style={{fontFamily: 'sans-serif', maxWidth: 900, margin: '0 auto', padding: 20}}>
+            <h2>Add Job Details</h2>
+            <JobDetailsForm/>
 
-            <h2 style={{ marginTop: 40 }}>Add Calendar Schedule</h2>
-            <CalendarScheduleForm />
+            <h2 style={{marginTop: 40}}>Add Calendar Schedule</h2>
+            <CalendarScheduleForm/>
 
-            <h2 style={{ marginTop: 40 }}>Add Trigger to Job</h2>
-            <TriggerForm />
+            <h2 style={{marginTop: 40}}>Add Trigger to Job</h2>
+            <TriggerForm/>
         </div>
     );
 }
@@ -68,7 +68,7 @@ function JobDetailsForm() {
     }, []);
 
     const handleChange = e =>
-        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+        setForm(prev => ({...prev, [e.target.name]: e.target.value}));
 
     const validate = () => {
         const e = {};
@@ -96,7 +96,7 @@ function JobDetailsForm() {
         e.preventDefault();
         if (validate()) {
             alert(JSON.stringify(form, null, 2));
-            setForm({ jobName: '', sysuid: 255, library: '', lpar: '' });
+            setForm({jobName: '', sysuid: 255, library: '', lpar: ''});
         }
     };
 
@@ -159,10 +159,10 @@ function CalendarScheduleForm() {
         e.preventDefault();
         const result =
             frequency === 'Daily'
-                ? { frequency, time }
+                ? {frequency, time}
                 : frequency === 'Weekly'
-                    ? { frequency, time, weekDays }
-                    : { frequency, time, runMonths, runType, runDays };
+                    ? {frequency, time, weekDays}
+                    : {frequency, time, runMonths, runType, runDays};
         alert(JSON.stringify(result, null, 2));
     };
 
@@ -184,7 +184,7 @@ function CalendarScheduleForm() {
 
     const weekShortcut = arr => setWeekDays(arr);
 
-    const range = (from, to) => Array.from({ length: to - from + 1 }, (_, i) => i + from);
+    const range = (from, to) => Array.from({length: to - from + 1}, (_, i) => i + from);
 
     const runDayOptions =
         runType === 'Calendar Day'
@@ -212,13 +212,13 @@ function CalendarScheduleForm() {
             />
 
             {frequency === 'Daily' && (
-                <p style={{ marginLeft: 6 }}>All days (Mon–Sun) selected &amp; locked.</p>
+                <p style={{marginLeft: 6}}>All days (Mon–Sun) selected &amp; locked.</p>
             )}
 
             {frequency === 'Weekly' && (
                 <>
-                    <p style={{ margin: '8px 0 4px' }}>Shortcuts:</p>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    <p style={{margin: '8px 0 4px'}}>Shortcuts:</p>
+                    <div style={{display: 'flex', gap: 8, flexWrap: 'wrap'}}>
                         <button type="button" onClick={() => weekShortcut(weekdays.slice(0, 5))}>
                             Mon–Fri
                         </button>
@@ -230,8 +230,8 @@ function CalendarScheduleForm() {
                         </button>
                     </div>
 
-                    <p style={{ margin: '12px 0 4px' }}>Select days:</p>
-                    <div style={{ display: 'flex', gap: 6 }}>
+                    <p style={{margin: '12px 0 4px'}}>Select days:</p>
+                    <div style={{display: 'flex', gap: 6}}>
                         {weekdays.map(d => (
                             <label key={d}>
                                 <input
@@ -248,8 +248,8 @@ function CalendarScheduleForm() {
 
             {frequency === 'Monthly' && (
                 <>
-                    <p style={{ margin: '12px 0 4px' }}>Run Months (toggle):</p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 6 }}>
+                    <p style={{margin: '12px 0 4px'}}>Run Months (toggle):</p>
+                    <div style={{display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 6}}>
                         {months.map(m => (
                             <label key={m}>
                                 <input
@@ -264,7 +264,7 @@ function CalendarScheduleForm() {
 
                     <Fieldset legend="Run Type">
                         {['Calendar Day', 'Business Day', 'Weekdays'].map(t => (
-                            <label key={t} style={{ marginRight: 14 }}>
+                            <label key={t} style={{marginRight: 14}}>
                                 <input
                                     type="radio"
                                     name="runType"
@@ -277,10 +277,10 @@ function CalendarScheduleForm() {
                         ))}
                     </Fieldset>
 
-                    <p style={{ margin: '12px 0 4px' }}>
+                    <p style={{margin: '12px 0 4px'}}>
                         Days of Run (toggle):
                     </p>
-                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    <div style={{display: 'flex', gap: 6, flexWrap: 'wrap'}}>
                         {runDayOptions.map(d => (
                             <label key={d}>
                                 <input
@@ -295,8 +295,8 @@ function CalendarScheduleForm() {
                 </>
             )}
 
-            <button type="submit" style={{ marginTop: 16 }}>
-                Save Schedule
+            <button type="submit" style={{marginTop: 16}}>
+                Save Schedule
             </button>
         </form>
     );
@@ -328,7 +328,7 @@ function TriggerForm() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        alert(JSON.stringify({ job: selectedJob, frequency: selectedFreq }, null, 2));
+        alert(JSON.stringify({job: selectedJob, frequency: selectedFreq}, null, 2));
     };
 
     return (
@@ -349,35 +349,35 @@ function TriggerForm() {
                 options={freqOptions}
             />
 
-            <button type="submit">Add Trigger</button>
+            <button type="submit">Add Trigger</button>
         </form>
     );
 }
 
 // --- shared UI -------------------------------------------------------------
-function Field({ label, error, ...rest }) {
+function Field({label, error, ...rest}) {
     return (
-        <div style={{ marginBottom: 12 }}>
-            <label style={{ display: 'block', fontWeight: 600 }}>
+        <div style={{marginBottom: 12}}>
+            <label style={{display: 'block', fontWeight: 600}}>
                 {label}
                 <input
                     {...rest}
-                    style={{ display: 'block', padding: 6, marginTop: 4, width: 220 }}
+                    style={{display: 'block', padding: 6, marginTop: 4, width: 220}}
                 />
             </label>
-            {error && <span style={{ color: 'crimson', fontSize: 12 }}>{error}</span>}
+            {error && <span style={{color: 'crimson', fontSize: 12}}>{error}</span>}
         </div>
     );
 }
 
-function Select({ label, options, error, ...rest }) {
+function Select({label, options, error, ...rest}) {
     return (
-        <div style={{ marginBottom: 12 }}>
-            <label style={{ display: 'block', fontWeight: 600 }}>
+        <div style={{marginBottom: 12}}>
+            <label style={{display: 'block', fontWeight: 600}}>
                 {label}
                 <select
                     {...rest}
-                    style={{ display: 'block', padding: 6, marginTop: 4, width: 226 }}
+                    style={{display: 'block', padding: 6, marginTop: 4, width: 226}}
                 >
                     <option value="">-- select --</option>
                     {options.map(o => (
@@ -387,15 +387,15 @@ function Select({ label, options, error, ...rest }) {
                     ))}
                 </select>
             </label>
-            {error && <span style={{ color: 'crimson', fontSize: 12 }}>{error}</span>}
+            {error && <span style={{color: 'crimson', fontSize: 12}}>{error}</span>}
         </div>
     );
 }
 
-function Fieldset({ legend, children }) {
+function Fieldset({legend, children}) {
     return (
-        <fieldset style={{ margin: '12px 0', padding: '6px 10px' }}>
-            <legend style={{ fontWeight: 600 }}>{legend}</legend>
+        <fieldset style={{margin: '12px 0', padding: '6px 10px'}}>
+            <legend style={{fontWeight: 600}}>{legend}</legend>
             {children}
         </fieldset>
     );
