@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks">
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test2/findSecondLongestWord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/findNthLongestWord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/test1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/test2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test1/test2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +19,8 @@
         <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="JSX File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -136,7 +132,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
       </set>
     </attachedChunks>
   </component>
@@ -177,7 +173,13 @@
       <workItem from="1747168163671" duration="12349000" />
       <workItem from="1747495098690" duration="14710000" />
       <workItem from="1748265215579" duration="12693000" />
-      <workItem from="1748590852632" duration="615000" />
+      <workItem from="1748590852632" duration="14090000" />
+      <workItem from="1749147098327" duration="643000" />
+      <workItem from="1749479239000" duration="598000" />
+      <workItem from="1749484852232" duration="583000" />
+      <workItem from="1749567037513" duration="598000" />
+      <workItem from="1749659305157" duration="2989000" />
+      <workItem from="1750080798885" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="tasks">
       <option name="closed" value="true" />
@@ -283,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748007976793</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tasks">
+      <option name="closed" value="true" />
+      <created>1748788171683</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748788171683</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
