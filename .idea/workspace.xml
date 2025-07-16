@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks" />
+    <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks">
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/marchingBand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/integerGame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/marchingBand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/marchingBand2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,89 +71,102 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Node.js.Calculator.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Calculator2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Calculator3.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.IndexManager.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.IndexManager2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.LRUCache.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Storage.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.calculateFrequency.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.cityLine.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.directionRight.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.findNthLongestWord.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.findSecondLongestWord.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.gatherSticks.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.gcd.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.group.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.isPalindrome.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.maxVacationLength.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.mergeSortedArrays.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.minAbsDifference.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.moves.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.nanagram.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.reverseInGroups.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.reverseWords.js (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Node.js.reverseWords.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.solution.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.solution1.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.solve.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.js (1).executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test1.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test2.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.updateLap.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.wordSet.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/sunilsoni/WebstormProjects/interview-code-js/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.Calculator.js.executor": "Run",
+    "Node.js.Calculator2.js.executor": "Run",
+    "Node.js.Calculator3.js.executor": "Run",
+    "Node.js.IndexManager.js.executor": "Run",
+    "Node.js.IndexManager2.js.executor": "Run",
+    "Node.js.LRUCache.js.executor": "Run",
+    "Node.js.Storage.js.executor": "Run",
+    "Node.js.calculateFrequency.js.executor": "Run",
+    "Node.js.cityLine.js.executor": "Run",
+    "Node.js.directionRight.js.executor": "Run",
+    "Node.js.findNthLongestWord.js.executor": "Run",
+    "Node.js.findSecondLongestWord.js.executor": "Run",
+    "Node.js.gatherSticks.js.executor": "Run",
+    "Node.js.gcd.js.executor": "Run",
+    "Node.js.group.js.executor": "Run",
+    "Node.js.index.ts.executor": "Run",
+    "Node.js.integerGame.js.executor": "Run",
+    "Node.js.isPalindrome.js.executor": "Run",
+    "Node.js.marchingBand.js (1).executor": "Run",
+    "Node.js.marchingBand.js.executor": "Run",
+    "Node.js.marchingBand2.js.executor": "Run",
+    "Node.js.maxVacationLength.js.executor": "Run",
+    "Node.js.mergeSortedArrays.js.executor": "Run",
+    "Node.js.minAbsDifference.js.executor": "Run",
+    "Node.js.moves.js.executor": "Run",
+    "Node.js.nanagram.js.executor": "Run",
+    "Node.js.reverseInGroups.js.executor": "Run",
+    "Node.js.reverseWords.js (1).executor": "Debug",
+    "Node.js.reverseWords.js.executor": "Run",
+    "Node.js.solution.js.executor": "Run",
+    "Node.js.solution1.js.executor": "Run",
+    "Node.js.solve.js.executor": "Run",
+    "Node.js.test.js (1).executor": "Run",
+    "Node.js.test.js.executor": "Run",
+    "Node.js.test1.js (1).executor": "Run",
+    "Node.js.test1.js.executor": "Run",
+    "Node.js.test10.js.executor": "Run",
+    "Node.js.test2.js (1).executor": "Run",
+    "Node.js.test2.js.executor": "Run",
+    "Node.js.test3.js.executor": "Run",
+    "Node.js.test4.js.executor": "Run",
+    "Node.js.test5.js.executor": "Run",
+    "Node.js.test6.js.executor": "Run",
+    "Node.js.test7.js.executor": "Run",
+    "Node.js.test8.js.executor": "Run",
+    "Node.js.updateLap.js.executor": "Run",
+    "Node.js.wordSet.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "ts.external.directory.path": "/Users/sunilsoni/WebstormProjects/interview-code-js/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Node.js.test2.js">
-    <configuration name="findNthLongestWord.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/findNthLongestWord.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3">
+}]]></component>
+  <component name="RunManager" selected="Node.js.test10.js">
+    <configuration name="marchingBand2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/june/marchingBand2.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/june">
       <method v="2" />
     </configuration>
-    <configuration name="findSecondLongestWord.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test2/findSecondLongestWord.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test2">
+    <configuration name="marchingBand.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/july/marchingBand.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/july">
       <method v="2" />
     </configuration>
-    <configuration name="reverseWords.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/reverseWords.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3">
+    <configuration name="test10.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test10.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/july">
       <method v="2" />
     </configuration>
-    <configuration name="test1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/test1.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3">
+    <configuration name="test7.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test7.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/july">
       <method v="2" />
     </configuration>
-    <configuration name="test2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3/test2.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/march/test3">
+    <configuration name="test8.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test8.js" working-dir="$PROJECT_DIR$/src/com/interview/code/js/2025/july">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.test2.js" />
-        <item itemvalue="Node.js.test1.js" />
-        <item itemvalue="Node.js.findNthLongestWord.js" />
-        <item itemvalue="Node.js.findSecondLongestWord.js" />
-        <item itemvalue="Node.js.reverseWords.js" />
+        <item itemvalue="Node.js.test10.js" />
+        <item itemvalue="Node.js.test7.js" />
+        <item itemvalue="Node.js.test8.js" />
+        <item itemvalue="Node.js.marchingBand.js (1)" />
+        <item itemvalue="Node.js.marchingBand2.js" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
       </set>
     </attachedChunks>
   </component>
@@ -176,7 +213,14 @@
       <workItem from="1749484852232" duration="583000" />
       <workItem from="1749567037513" duration="598000" />
       <workItem from="1749659305157" duration="2989000" />
-      <workItem from="1750080798885" duration="609000" />
+      <workItem from="1750080798885" duration="15924000" />
+      <workItem from="1750427999746" duration="4715000" />
+      <workItem from="1750657678125" duration="610000" />
+      <workItem from="1751216338819" duration="598000" />
+      <workItem from="1751376765604" duration="5158000" />
+      <workItem from="1751873307132" duration="16219000" />
+      <workItem from="1752260664705" duration="1814000" />
+      <workItem from="1752327759331" duration="10556000" />
     </task>
     <task id="LOCAL-00001" summary="tasks">
       <option name="closed" value="true" />
@@ -298,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750086391367</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="tasks">
+      <option name="closed" value="true" />
+      <created>1750103255560</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750103255560</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
