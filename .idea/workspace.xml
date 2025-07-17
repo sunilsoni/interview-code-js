@@ -5,28 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679f4de6-6cc3-49da-9881-6d1bd3a041d1" name="Changes" comment="tasks">
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/marchingBand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test10.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/july/test9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/integerGame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/marchingBand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/marchingBand2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/interview/code/js/2025/june/test8.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +198,7 @@
       <workItem from="1751376765604" duration="5158000" />
       <workItem from="1751873307132" duration="16219000" />
       <workItem from="1752260664705" duration="1814000" />
-      <workItem from="1752327759331" duration="10556000" />
+      <workItem from="1752327759331" duration="12673000" />
     </task>
     <task id="LOCAL-00001" summary="tasks">
       <option name="closed" value="true" />
@@ -350,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750103255560</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="tasks">
+      <option name="closed" value="true" />
+      <created>1752700641872</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752700641872</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
