@@ -36,7 +36,7 @@ function boundingRectangle(coordinatesPoints) {
     }
 
     // Compute width/height from extremes. If all x are equal, width becomes 0 (valid).
-    const width  = maxX - minX;                    // width is right - left
+    const width = maxX - minX;                    // width is right - left
     const height = maxY - minY;                    // height is bottom - top
 
     // Build the required answer format: [left, top, width, height].

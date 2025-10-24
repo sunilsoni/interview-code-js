@@ -31,10 +31,10 @@ function marchingBand(N, houses, K) {
 // line4: K
 function main() {
     const tokens = gets().trim().split(/\s+/).map(Number);
-    const N      = tokens[0];
+    const N = tokens[0];
     const houses = tokens.slice(1, 1 + N);
     // const M   = tokens[1 + N];  // unused
-    const K      = tokens[2 + N];
+    const K = tokens[2 + N];
     console.log(marchingBand(N, houses, K));
 }
 
@@ -71,14 +71,14 @@ ${Array(1000).fill(3).join(' ')}
 
 tests.forEach(({input, expected}, i) => {
     global.gets = () => input;
-    const out = (()=>{
+    const out = (() => {
         const tokens = gets().trim().split(/\s+/).map(Number);
-        const N      = tokens[0];
+        const N = tokens[0];
         const houses = tokens.slice(1, 1 + N);
-        const K      = tokens[2 + N];
+        const K = tokens[2 + N];
         return marchingBand(N, houses, K);
     })();
-    console.log(`Test ${i+1}: got ${out}, expected ${expected} → ${out===expected?'PASS':'FAIL'}`);
+    console.log(`Test ${i + 1}: got ${out}, expected ${expected} → ${out === expected ? 'PASS' : 'FAIL'}`);
 });
 
 // Call main() in real judge environment

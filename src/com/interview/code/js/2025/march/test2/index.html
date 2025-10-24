@@ -6,33 +6,33 @@
             <label>{{element.label}}</label>
 
             <input *ngIf="element.type === 'text' || element.type === 'email' || element.type === 'password' || element.type === 'date' || element.type === 'number'"
-                   [type]="element.type"
-                   [placeholder]="element.placeholder"
+                   [attr.max]="element.max"
                    [attr.minLength]="element.minLength"
                    [attr.min]="element.min"
-                   [attr.max]="element.max"
-                   [formControlName]="element.label">
+                   [formControlName]="element.label"
+                   [placeholder]="element.placeholder"
+                   [type]="element.type">
 
             <select *ngIf="element.type === 'select'" [formControlName]="element.label">
                 <option *ngFor="let option of element.options" [value]="option">{{option}}</option>
             </select>
 
             <div *ngIf="element.type === 'checkbox'">
-                <input type="checkbox" [formControlName]="element.label"> {{element.label}}
+                <input [formControlName]="element.label" type="checkbox"> {{element.label}}
             </div>
 
             <div *ngIf="element.type === 'radio'">
                 <label *ngFor="let option of element.options">
-                    <input type="radio" [value]="option" [formControlName]="element.label"> {{option}}
+                    <input [formControlName]="element.label" [value]="option" type="radio"> {{option}}
                 </label>
             </div>
 
             <textarea *ngIf="element.type === 'textarea'"
+                      [formControlName]="element.label"
                       [placeholder]="element.placeholder"
-                      [rows]="element.rows"
-                      [formControlName]="element.label"></textarea>
+                      [rows]="element.rows"></textarea>
 
-            <input *ngIf="element.type === 'file'" type="file" [attr.accept]="element.accept.join(',')">
+            <input *ngIf="element.type === 'file'" [attr.accept]="element.accept.join(',')" type="file">
 
         </div>
 

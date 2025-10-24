@@ -1,9 +1,9 @@
 const Stripe = require('stripe');
-const { STRIPE_API_KEY } = require('../settings');
+const {STRIPE_API_KEY} = require('../settings');
 
 class ProductsService {
     constructor() {
-        this.stripe = Stripe(STRIPE_API_KEY, { timeout: 200 });
+        this.stripe = Stripe(STRIPE_API_KEY, {timeout: 200});
     }
 
     async getProduct(productId) {

@@ -38,15 +38,15 @@ function marchingBand(N, houses, K) {
 // Test harness
 const tests = [
     // new test: only “10” input → expected 1
-    { args: [10], expected: 1 },
+    {args: [10], expected: 1},
     // sample from prompt
     {
-        args: [10, [1,2,1,2,1,1,2,1,1,2], 2],
+        args: [10, [1, 2, 1, 2, 1, 1, 2, 1, 1, 2], 2],
         expected: 5
     },
     // no removals
     {
-        args: [7, [1,1,2,2,2,1,1], 0],
+        args: [7, [1, 1, 2, 2, 2, 1, 1], 0],
         expected: 3
     },
     // all same
@@ -56,7 +56,7 @@ const tests = [
     }
 ];
 
-tests.forEach(({ args, expected }, i) => {
+tests.forEach(({args, expected}, i) => {
     const got = marchingBand(...args);
-    console.log(`Test ${i+1}: got ${got}, expected ${expected} → ${got===expected?'PASS':'FAIL'}`);
+    console.log(`Test ${i + 1}: got ${got}, expected ${expected} → ${got === expected ? 'PASS' : 'FAIL'}`);
 });

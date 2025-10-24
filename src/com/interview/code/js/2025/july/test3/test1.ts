@@ -8,8 +8,8 @@ function sumGreaterThanTen(arr) {
 // Alternative function using for loop
 function sumGreaterThanTenWithLoop(arr) {
     let sum = 0;
-    for(let num of arr) {
-        if(num > 10) {
+    for (let num of arr) {
+        if (num > 10) {
             sum += num;
         }
     }

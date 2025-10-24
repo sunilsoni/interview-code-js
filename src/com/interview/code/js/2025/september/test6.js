@@ -61,4 +61,4 @@ if (typeof require !== 'undefined' && require.main === module) {
     main();
 }
 
-module.exports = { boundingRectangle };
+module.exports = {boundingRectangle};

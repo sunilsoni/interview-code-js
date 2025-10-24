@@ -33,6 +33,12 @@ class PoliceSystem {
         this.calls = [];
     }
 
+    // Unused here, but handy if you want to pass "HH:MM" strings instead of numbers
+    static timeToMinutes(timeStr) {
+        const [h, m] = timeStr.split(':').map(Number);
+        return h * 60 + m;
+    }
+
     addShift(shift) {
         this.shifts.push(shift);
     }
@@ -72,14 +78,8 @@ class PoliceSystem {
 
     calculateOverlapMinutes(shiftStart, shiftEnd, callStart, callEnd) {
         const overlapStart = Math.max(shiftStart, callStart);
-        const overlapEnd   = Math.min(shiftEnd,   callEnd);
+        const overlapEnd = Math.min(shiftEnd, callEnd);
         return Math.max(0, overlapEnd - overlapStart);
-    }
-
-    // Unused here, but handy if you want to pass "HH:MM" strings instead of numbers
-    static timeToMinutes(timeStr) {
-        const [h, m] = timeStr.split(':').map(Number);
-        return h * 60 + m;
     }
 }
 

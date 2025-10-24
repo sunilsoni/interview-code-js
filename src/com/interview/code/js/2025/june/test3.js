@@ -59,12 +59,12 @@ function areAnagramsLarge(str1, str2) {
  */
 function runPerformanceTests() {
     const testCases = [
-        { size: 'small', str1: 'listen', str2: 'silent' },
-        { size: 'medium', str1: 'a'.repeat(1000), str2: 'a'.repeat(1000) },
-        { size: 'large', str1: 'a'.repeat(100000), str2: 'a'.repeat(100000) }
+        {size: 'small', str1: 'listen', str2: 'silent'},
+        {size: 'medium', str1: 'a'.repeat(1000), str2: 'a'.repeat(1000)},
+        {size: 'large', str1: 'a'.repeat(100000), str2: 'a'.repeat(100000)}
     ];
 
-    testCases.forEach(({ size, str1, str2 }) => {
+    testCases.forEach(({size, str1, str2}) => {
         console.log(`\nTesting ${size} strings:`);
 
         console.time('Standard version');

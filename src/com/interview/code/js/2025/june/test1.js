@@ -72,14 +72,14 @@ function areAnagramsFrequency(str1, str2) {
  */
 function testAnagrams() {
     const testCases = [
-        { str1: 'bare', str2: 'bear', expected: true },
-        { str1: 'reed', str2: 'deer', expected: true },
-        { str1: 'flow', str2: 'wolf', expected: true },
-        { str1: 'hello', str2: 'world', expected: false },
-        { str1: 'Listen', str2: 'Silent', expected: true },
-        { str1: '', str2: '', expected: false },
-        { str1: 'A gentleman', str2: 'Elegant man', expected: true },
-        { str1: '12345', str2: '54321', expected: true }
+        {str1: 'bare', str2: 'bear', expected: true},
+        {str1: 'reed', str2: 'deer', expected: true},
+        {str1: 'flow', str2: 'wolf', expected: true},
+        {str1: 'hello', str2: 'world', expected: false},
+        {str1: 'Listen', str2: 'Silent', expected: true},
+        {str1: '', str2: '', expected: false},
+        {str1: 'A gentleman', str2: 'Elegant man', expected: true},
+        {str1: '12345', str2: '54321', expected: true}
     ];
 
     console.log('Testing Sort Method:');

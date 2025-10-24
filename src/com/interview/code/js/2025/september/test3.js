@@ -16,12 +16,12 @@ const report = {
                     startTime: "2024-06-10T08:15:00Z",
                     endTime: "2024-06-10T08:45:00Z",
                     pagesVisited: [
-                        { page: "Home", duration: 120 },
-                        { page: "Profile", duration: 180 }
+                        {page: "Home", duration: 120},
+                        {page: "Profile", duration: 180}
                     ],
                     events: [
-                        { eventType: "login", timestamp: "2024-06-10T08:15:05Z" },
-                        { eventType: "purchase", timestamp: "2024-06-10T08:30:00Z", amount: 19.99 }
+                        {eventType: "login", timestamp: "2024-06-10T08:15:05Z"},
+                        {eventType: "purchase", timestamp: "2024-06-10T08:30:00Z", amount: 19.99}
                     ]
                 }
             ]
@@ -35,12 +35,12 @@ const report = {
                     startTime: "2024-06-10T09:00:00Z",
                     endTime: "2024-06-10T09:30:00Z",
                     pagesVisited: [
-                        { page: "Home", duration: 100 },
-                        { page: "Shop", duration: 200 }
+                        {page: "Home", duration: 100},
+                        {page: "Shop", duration: 200}
                     ],
                     events: [
-                        { eventType: "login", timestamp: "2024-06-10T09:00:10Z" },
-                        { eventType: "logout", timestamp: "2024-06-10T09:30:00Z" }
+                        {eventType: "login", timestamp: "2024-06-10T09:00:10Z"},
+                        {eventType: "logout", timestamp: "2024-06-10T09:30:00Z"}
                     ]
                 }
             ]

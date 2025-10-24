@@ -9,6 +9,6 @@ function sum(...nums) {
 }
 
 // Examples:
-console.log( sum(2, 3, 4) );            // 9
-console.log( sum(6, 7, 8, 10, 15) );   // 46
-console.log( sum(1, 2, 3, 4, 5, 6, 7) );// 28
+console.log(sum(2, 3, 4));            // 9
+console.log(sum(6, 7, 8, 10, 15));   // 46
+console.log(sum(1, 2, 3, 4, 5, 6, 7));// 28

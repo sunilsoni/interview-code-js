@@ -2,7 +2,7 @@
 function integerGame(K) {
     // Precompute counts dp[len][sum]: ways to fill len digits (remaining) to make sum
     const MAX_SUM = 10;
-    const dp = Array.from({ length: 12 }, () => Array(MAX_SUM + 1).fill(0));
+    const dp = Array.from({length: 12}, () => Array(MAX_SUM + 1).fill(0));
     dp[0][0] = 1;
     for (let len = 1; len <= 11; len++) {
         for (let s = 0; s <= MAX_SUM; s++) {
@@ -57,19 +57,19 @@ function integerGame(K) {
 // Test harness
 function runTests() {
     const tests = [
-        { K: 1,    expected: 19 },
-        { K: 2,    expected: 28 },
-        { K: 9,    expected: 91 },
-        { K: 10,   expected: 109 },
-        { K: 100,  expected: integerGame(100) },    // verify internal consistency
-        { K: 10000, expected: integerGame(10000) }  // large input case
+        {K: 1, expected: 19},
+        {K: 2, expected: 28},
+        {K: 9, expected: 91},
+        {K: 10, expected: 109},
+        {K: 100, expected: integerGame(100)},    // verify internal consistency
+        {K: 10000, expected: integerGame(10000)}  // large input case
     ];
 
     tests.forEach(({K, expected}, i) => {
         const got = integerGame(K);
         const result = got === expected ? 'PASS' : 'FAIL';
         console.log(
-            `Test ${i+1}: K=${K} → got ${got}, expected ${expected} → ${result}`
+            `Test ${i + 1}: K=${K} → got ${got}, expected ${expected} → ${result}`
         );
     });
 }

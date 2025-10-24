@@ -67,37 +67,37 @@ function runTests() {
         {
             name: "Sample 1",
             pairs: [
-                ["Foundations of Computer Science","Operating Systems"],
-                ["Data Structures","Algorithms"],
-                ["Computer Networks","Computer Architecture"],
-                ["Algorithms","Foundations of Computer Science"],
-                ["Computer Architecture","Data Structures"],
-                ["Software Design","Computer Networks"]
+                ["Foundations of Computer Science", "Operating Systems"],
+                ["Data Structures", "Algorithms"],
+                ["Computer Networks", "Computer Architecture"],
+                ["Algorithms", "Foundations of Computer Science"],
+                ["Computer Architecture", "Data Structures"],
+                ["Software Design", "Computer Networks"]
             ],
             expected: "Data Structures"
         },
         {
             name: "Sample 2",
             pairs: [
-                ["Algorithms","Foundations of Computer Science"],
-                ["Data Structures","Algorithms"],
-                ["Foundations of Computer Science","Logic"],
-                ["Logic","Compilers"],
-                ["Compilers","Distributed Systems"]
+                ["Algorithms", "Foundations of Computer Science"],
+                ["Data Structures", "Algorithms"],
+                ["Foundations of Computer Science", "Logic"],
+                ["Logic", "Compilers"],
+                ["Compilers", "Distributed Systems"]
             ],
             expected: "Foundations of Computer Science"
         },
         {
             name: "Sample 3",
             pairs: [
-                ["Data Structures","Algorithms"]
+                ["Data Structures", "Algorithms"]
             ],
             expected: "Data Structures"
         },
         {
             name: "Large chain of 101",
             // build 100 pairs: C1→C2, C2→C3, …, C100→C101
-            pairs: Array.from({ length: 100 }, (_, i) => [`C${i+1}`, `C${i+2}`]),
+            pairs: Array.from({length: 100}, (_, i) => [`C${i + 1}`, `C${i + 2}`]),
             // totalCourses = 101 => idx = floor(101/2)=50 => course at position 50 is C51
             expected: "C51"
         }

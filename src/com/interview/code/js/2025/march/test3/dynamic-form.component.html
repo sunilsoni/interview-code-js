@@ -7,14 +7,14 @@
     <!-- generic HTML5 inputs -->
     <input
             *ngIf="['text','email','password','date','number','url','tel','color','range'].includes(elem.type)"
+            [attr.accept]="elem.accept?.join(',')"
+            [attr.max]="elem.max"
+            [attr.min]="elem.min"
+            [attr.minlength]="elem.minLength"
             [attr.type]="elem.type"
             [formControlName]="key(elem)"
             [placeholder]="elem.placeholder"
             [required]="elem.required"
-            [attr.minlength]="elem.minLength"
-            [attr.min]="elem.min"
-            [attr.max]="elem.max"
-            [attr.accept]="elem.accept?.join(',')"
     />
 
     <!-- textarea -->
@@ -36,23 +36,23 @@
     <!-- checkbox -->
     <label *ngIf="elem.type==='checkbox'">
         <input
-                type="checkbox"
                 [formControlName]="key(elem)"
+                type="checkbox"
         /> {{elem.label}}
     </label>
 
     <!-- radio -->
     <div *ngIf="elem.type==='radio'" [formControlName]="key(elem)">
         <label *ngFor="let opt of elem.options">
-            <input type="radio" [value]="opt"/> {{opt}}
+            <input [value]="opt" type="radio"/> {{opt}}
         </label>
     </div>
 
     <!-- submit button -->
     <button
             *ngIf="elem.type==='submit'"
-            type="submit"
-            [ngClass]="elem.style">
+            [ngClass]="elem.style"
+            type="submit">
         {{elem.label}}
     </button>
 </ng-container>

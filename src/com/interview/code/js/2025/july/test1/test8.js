@@ -16,7 +16,7 @@ function find_pairs(enrollments) {
 
     // Get all student IDs and sort them numerically
     // This ensures consistent pair ordering (id1 < id2)
-    const ids = Object.keys(studentCourses).sort((a,b)=>Number(a)-Number(b));
+    const ids = Object.keys(studentCourses).sort((a, b) => Number(a) - Number(b));
 
     // Store final results
     const result = {};
@@ -45,7 +45,7 @@ function deepEqualUnorderedPairs(actual, expected) {
 
     // Check each actual pair against expected
     for (const key of Object.keys(actual)) {
-        const [x,y] = key.split(",");
+        const [x, y] = key.split(",");
         const rev = `${y},${x}`;
         const valA = actual[key];
         let valB = null, matchKey = null;
@@ -71,7 +71,7 @@ function deepEqualUnorderedPairs(actual, expected) {
 
     // Ensure no extra pairs in expected
     for (const key of Object.keys(expected)) {
-        const [x,y] = key.split(",");
+        const [x, y] = key.split(",");
         const rev = `${y},${x}`;
         if (!seen.has(key) && !seen.has(rev)) {
             return false;

@@ -1,9 +1,9 @@
 const Stripe = require('stripe');
-const { STRIPE_API_KEY } = require('../settings');
+const {STRIPE_API_KEY} = require('../settings');
 
 class PaymentService {
     constructor() {
-        this.stripe = Stripe(STRIPE_API_KEY, { timeout: 200 });
+        this.stripe = Stripe(STRIPE_API_KEY, {timeout: 200});
     }
 
     async createCheckoutSession(product, quantity) {
@@ -25,7 +25,7 @@ class PaymentService {
                 cancel_url: 'http://localhost:3000/cancel',
             });
 
-            return { id: session.id, url: session.url, amountTotal: session.amount_total };
+            return {id: session.id, url: session.url, amountTotal: session.amount_total};
         } catch (e) {
             return null; // signal failure to caller
         }

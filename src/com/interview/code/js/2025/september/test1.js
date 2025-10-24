@@ -14,7 +14,7 @@ app.post('/api/runTasks', async (req, res) => {
         // Step 1: Validate all tasks
         for (const id of taskIds) {
             if (!TaskRunner.hasTask(id)) {
-                return res.status(400).json({ error: `Invalid Task: ${id}` });
+                return res.status(400).json({error: `Invalid Task: ${id}`});
             }
         }
 
@@ -26,7 +26,7 @@ app.post('/api/runTasks', async (req, res) => {
         for (let i = 0; i < totalTasks; i++) {
             const id = taskIds[i];
             const promise = TaskRunner.runTask(id).then(() => {
-                completionOrder.push({ index: i, completedAt: globalCounter++ });
+                completionOrder.push({index: i, completedAt: globalCounter++});
             });
             taskCompletionPromises.push(promise);
         }
@@ -65,7 +65,7 @@ app.post('/api/runTasks', async (req, res) => {
         res.status(200).json(result);
     } catch (err) {
         console.error('Error:', err);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({error: 'Internal Server Error'});
     }
 });
 
@@ -111,7 +111,7 @@ async function main() {
         },
         {
             name: "Large dataset",
-            taskIds: Array.from({ length: 200 }, (_, i) => `id${i}`),
+            taskIds: Array.from({length: 200}, (_, i) => `id${i}`),
             expectedLength: 200
         }
     ];
@@ -142,7 +142,7 @@ async function runMockTest(taskIds) {
     for (let i = 0; i < taskIds.length; i++) {
         const id = taskIds[i];
         const promise = TaskRunner.runTask(id).then(() => {
-            completionOrder.push({ index: i, completedAt: globalCounter++ });
+            completionOrder.push({index: i, completedAt: globalCounter++});
         });
         taskCompletionPromises.push(promise);
     }

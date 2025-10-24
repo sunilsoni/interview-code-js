@@ -28,6 +28,7 @@ function minimumDays(N, K, D) {
 
 /* ------------------------------------------------------------------ */
 /* Simple test runner – prints PASS / FAIL for each case              */
+
 /* ------------------------------------------------------------------ */
 function runTests() {
     const tests = [
@@ -51,7 +52,7 @@ function runTests() {
     });
 
     if (allPass) console.log('\n✅  All tests passed.');
-    else          console.log('\n❌  Some tests failed.');
+    else console.log('\n❌  Some tests failed.');
 }
 
 /* ------------------------------------------------------------------ */

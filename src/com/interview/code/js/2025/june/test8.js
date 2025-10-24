@@ -4,7 +4,7 @@
  */
 function marchingBand(N, houses, M, K) {
     // Build list of indices for each house 1..M
-    const pos = Array.from({ length: M + 1 }, () => []);
+    const pos = Array.from({length: M + 1}, () => []);
     for (let i = 0; i < N; i++) {
         pos[houses[i]].push(i);
     }
@@ -17,9 +17,9 @@ function marchingBand(N, houses, M, K) {
         for (let j = 0; j < A.length; j++) {
             // shrink until “bad” ≤ K
             while (true) {
-                const span  = A[j] - A[i] + 1;
+                const span = A[j] - A[i] + 1;
                 const goods = j - i + 1;
-                const bad   = span - goods;
+                const bad = span - goods;
                 if (bad <= K) break;
                 i++;
             }

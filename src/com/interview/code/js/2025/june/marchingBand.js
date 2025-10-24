@@ -11,7 +11,7 @@
  * @param {number[]} a    houses[i]
  * @param {number} M      total houses (not essential)
  * @param {number} K      max deletions
- * @return {number} 
+ * @return {number}
  */
 function marchingBand(N, a, M, K) {
     const uniqueHouses = new Set(a);           // iterate only present houses
@@ -19,7 +19,7 @@ function marchingBand(N, a, M, K) {
 
     for (const h of uniqueHouses) {
         let left = 0;
-        let bad  = 0;                            // non-h students in window
+        let bad = 0;                            // non-h students in window
 
         for (let right = 0; right < N; right++) {
             if (a[right] !== h) bad++;
@@ -31,7 +31,7 @@ function marchingBand(N, a, M, K) {
             }
 
             const windowSize = right - left + 1;
-            const good       = windowSize - bad;   // after deleting “bad”
+            const good = windowSize - bad;   // after deleting “bad”
             if (good > best) best = good;
         }
     }
@@ -43,7 +43,7 @@ function runTests() {
         {
             input: {
                 N: 10,
-                houses: [1,2,2,1,1,1,2,1,1,2],
+                houses: [1, 2, 2, 1, 1, 1, 2, 1, 1, 2],
                 M: 2,
                 K: 2
             },
@@ -52,7 +52,7 @@ function runTests() {
         {
             input: {
                 N: 6,
-                houses: [1,1,2,2,2,1],
+                houses: [1, 1, 2, 2, 2, 1],
                 M: 2,
                 K: 1
             },
@@ -61,7 +61,7 @@ function runTests() {
         {
             input: {
                 N: 6,
-                houses: [3,3,2,2,2,3],
+                houses: [3, 3, 2, 2, 2, 3],
                 M: 3,
                 K: 2
             },

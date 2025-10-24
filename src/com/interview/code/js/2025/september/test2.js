@@ -15,7 +15,7 @@ app.post('/api/runTasks', async (req, res, next) => {
         // Step 1: Validate all task IDs before starting any task
         for (const id of taskIds) {
             if (!TaskRunner.hasTask(id)) {
-                return res.status(400).json({ error: 'Invalid task ID: ' + id });
+                return res.status(400).json({error: 'Invalid task ID: ' + id});
             }
         }
 

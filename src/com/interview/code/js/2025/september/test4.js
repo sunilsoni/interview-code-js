@@ -23,12 +23,12 @@ const report = {
                     startTime: "2024-06-10T08:15:00Z",
                     endTime: "2024-06-10T08:45:00Z",
                     pagesVisited: [
-                        { page: "Home", duration: 120 },
-                        { page: "Profile", duration: 180 }
+                        {page: "Home", duration: 120},
+                        {page: "Profile", duration: 180}
                     ],
                     events: [
-                        { eventType: "login", timestamp: "2024-06-10T08:15:05Z" },
-                        { eventType: "purchase", timestamp: "2024-06-10T08:30:00Z", amount: 19.99 }
+                        {eventType: "login", timestamp: "2024-06-10T08:15:05Z"},
+                        {eventType: "purchase", timestamp: "2024-06-10T08:30:00Z", amount: 19.99}
                     ]
                 }
             ]
@@ -42,12 +42,12 @@ const report = {
                     startTime: "2024-06-10T09:00:00Z",
                     endTime: "2024-06-10T09:30:00Z",
                     pagesVisited: [
-                        { page: "Home", duration: 100 },
-                        { page: "Shop", duration: 200 }
+                        {page: "Home", duration: 100},
+                        {page: "Shop", duration: 200}
                     ],
                     events: [
-                        { eventType: "login", timestamp: "2024-06-10T09:00:10Z" },
-                        { eventType: "logout", timestamp: "2024-06-10T09:30:00Z" }
+                        {eventType: "login", timestamp: "2024-06-10T09:00:10Z"},
+                        {eventType: "logout", timestamp: "2024-06-10T09:30:00Z"}
                     ]
                 }
             ]
@@ -94,7 +94,7 @@ app.get("/user", (req, res) => {
             events: session.events.map(ev => ({
                 eventType: ev.eventType,
                 timestamp: ev.timestamp,
-                ...(ev.amount && { amount: ev.amount })
+                ...(ev.amount && {amount: ev.amount})
             }))
         }))
     };
@@ -130,7 +130,7 @@ app.get("/popular-page", (req, res) => {
     pages.sort((a, b) => b.totalDuration - a.totalDuration);
 
     // Pick the top one as the most popular
-    const mostPopular = pages[0] || { page: null, totalDuration: 0 };
+    const mostPopular = pages[0] || {page: null, totalDuration: 0};
 
     // Send response as JSON
     res.json({

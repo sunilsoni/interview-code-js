@@ -42,28 +42,38 @@ function main() {
     (() => {
         // Shifts for Officer1
         const shifts = [
-            { id: 's1', officerId: 'o1', vehicleId: 'v1',
+            {
+                id: 's1', officerId: 'o1', vehicleId: 'v1',
                 startShift: new Date('2025-09-16T11:00:00'),
-                endShift:   new Date('2025-09-16T15:00:00') },
-            { id: 's2', officerId: 'o1', vehicleId: 'v2',
+                endShift: new Date('2025-09-16T15:00:00')
+            },
+            {
+                id: 's2', officerId: 'o1', vehicleId: 'v2',
                 startShift: new Date('2025-09-16T06:00:00'),
-                endShift:   new Date('2025-09-16T09:00:00') },
+                endShift: new Date('2025-09-16T09:00:00')
+            },
         ];
         // Dispatches (calls)
         const dispatches = [
-            { id: 'd1', vehicleId: 'v1', callId: 'c1',
+            {
+                id: 'd1', vehicleId: 'v1', callId: 'c1',
                 startCall: new Date('2025-09-16T09:00:00'),
-                endCall:   new Date('2025-09-16T12:00:00') },
-            { id: 'd2', vehicleId: 'v2', callId: 'c2',
+                endCall: new Date('2025-09-16T12:00:00')
+            },
+            {
+                id: 'd2', vehicleId: 'v2', callId: 'c2',
                 startCall: new Date('2025-09-16T02:00:00'),
-                endCall:   new Date('2025-09-16T05:00:00') },
-            { id: 'd3', vehicleId: 'v2', callId: 'c3',
+                endCall: new Date('2025-09-16T05:00:00')
+            },
+            {
+                id: 'd3', vehicleId: 'v2', callId: 'c3',
                 startCall: new Date('2025-09-16T07:00:00'),
-                endCall:   new Date('2025-09-16T10:00:00') },
+                endCall: new Date('2025-09-16T10:00:00')
+            },
         ];
         tests.push({
             name: 'Prompt example',
-            data: { shifts, dispatches },
+            data: {shifts, dispatches},
             officerId: 'o1',
             expected: 180
         });
@@ -72,7 +82,7 @@ function main() {
     // — Edge case: no shifts —
     tests.push({
         name: 'No shifts',
-        data: { shifts: [], dispatches: [{ /* ... */ }] },
+        data: {shifts: [], dispatches: [{ /* ... */}]},
         officerId: 'oX',
         expected: 0
     });
@@ -88,26 +98,26 @@ function main() {
                 officerId: i % 2 === 0 ? 'oBig' : 'oOther',
                 vehicleId: `v${i % 100}`,
                 startShift: new Date(1_600_000_000_000 + i * 100_000),
-                endShift:   new Date(1_600_000_000_000 + i * 100_000 + 60 * 60_000),
+                endShift: new Date(1_600_000_000_000 + i * 100_000 + 60 * 60_000),
             });
             dispatches.push({
                 id: `d${i}`,
                 vehicleId: `v${i % 100}`,
                 callId: `c${i}`,
                 startCall: new Date(1_600_000_000_000 + i * 90_000),
-                endCall:   new Date(1_600_000_000_000 + i * 90_000 + 30 * 60_000),
+                endCall: new Date(1_600_000_000_000 + i * 90_000 + 30 * 60_000),
             });
         }
         tests.push({
             name: 'Large performance test',
-            data: { shifts, dispatches },
+            data: {shifts, dispatches},
             officerId: 'oBig',
             expected: null  // we won’t assert a fixed number here
         });
     })();
 
     // Run them
-    for (const { name, data, officerId, expected } of tests) {
+    for (const {name, data, officerId, expected} of tests) {
         const t0 = Date.now();
         const result = getOfficerCallMinutes(officerId, data);
         const dt = Date.now() - t0;

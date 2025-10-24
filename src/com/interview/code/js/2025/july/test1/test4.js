@@ -17,7 +17,8 @@ function marchingBand(N, houses, M, K) {
             left++;
         }
 
-        result = Math.max(result, maxCount)    }
+        result = Math.max(result, maxCount)
+    }
 
     return result;
 }
@@ -28,7 +29,7 @@ function runMarchingBandTests() {
         // sample from prompt
         {
             N: 10,
-            houses: [1,2,1,2,1,1,2,1,1,2],
+            houses: [1, 2, 1, 2, 1, 1, 2, 1, 1, 2],
             M: 2,
             K: 2,
             expected: 5
@@ -36,7 +37,7 @@ function runMarchingBandTests() {
         // no removals, longest original run of 1's is 3
         {
             N: 7,
-            houses: [1,1,2,2,2,1,1],
+            houses: [1, 1, 2, 2, 2, 1, 1],
             M: 2,
             K: 0,
             expected: 3
@@ -50,11 +51,11 @@ function runMarchingBandTests() {
             expected: 1000
         },
         // large random case
-        (function() {
+        (function () {
             const N = 100000;
             const houses = new Array(N);
-            for (let i = 0; i < N; i++) houses[i] = Math.floor(Math.random()*5)+1;
-            return { N, houses, M: 5, K: 500, expected: marchingBand(N, houses, 5, 500) };
+            for (let i = 0; i < N; i++) houses[i] = Math.floor(Math.random() * 5) + 1;
+            return {N, houses, M: 5, K: 500, expected: marchingBand(N, houses, 5, 500)};
         })()
     ];
 
@@ -62,7 +63,7 @@ function runMarchingBandTests() {
         const got = marchingBand(t.N, t.houses, t.M, t.K);
         const pass = got === t.expected ? 'PASS' : 'FAIL';
         console.log(
-            `Test ${i+1}: got ${got}, expected ${t.expected} → ${pass}`
+            `Test ${i + 1}: got ${got}, expected ${t.expected} → ${pass}`
         );
     });
 }

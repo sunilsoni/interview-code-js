@@ -7,7 +7,7 @@ function find_pairs(enrollments) {
         if (!studentCourses[sid]) studentCourses[sid] = new Set();
         studentCourses[sid].add(course);
     }
-    const ids = Object.keys(studentCourses).sort((a,b)=>Number(a)-Number(b));
+    const ids = Object.keys(studentCourses).sort((a, b) => Number(a) - Number(b));
     const result = {};
     for (let i = 0; i < ids.length; i++) {
         for (let j = i + 1; j < ids.length; j++) {
@@ -25,31 +25,31 @@ function find_pairs(enrollments) {
 //── your three sample inputs ──────────────────────────────────────────────────
 
 const enrollments1 = [
-    ["58","Linear Algebra"],["94","Art History"],["94","Operating Systems"],
-    ["17","Software Design"],["58","Mechanics"],["58","Economics"],
-    ["17","Linear Algebra"],["17","Political Science"],["94","Economics"],
-    ["25","Economics"],["58","Software Design"]
+    ["58", "Linear Algebra"], ["94", "Art History"], ["94", "Operating Systems"],
+    ["17", "Software Design"], ["58", "Mechanics"], ["58", "Economics"],
+    ["17", "Linear Algebra"], ["17", "Political Science"], ["94", "Economics"],
+    ["25", "Economics"], ["58", "Software Design"]
 ];
 
 const enrollments2 = [
-    ["0","Advanced Mechanics"],["0","Art History"],
-    ["1","Course 1"],["1","Course 2"],
-    ["2","Computer Architecture"],
-    ["3","Course 1"],["3","Course 2"],
-    ["4","Algorithms"]
+    ["0", "Advanced Mechanics"], ["0", "Art History"],
+    ["1", "Course 1"], ["1", "Course 2"],
+    ["2", "Computer Architecture"],
+    ["3", "Course 1"], ["3", "Course 2"],
+    ["4", "Algorithms"]
 ];
 
 const enrollments3 = [
-    ["23","Software Design"],
-    ["3","Advanced Mechanics"],
-    ["2","Art History"],
-    ["33","Another"]
+    ["23", "Software Design"],
+    ["3", "Advanced Mechanics"],
+    ["2", "Art History"],
+    ["33", "Another"]
 ];
 
 //── the “expected” definitions (unchanged) ───────────────────────────────────
 
 const expected1 = {
-    "17,58": ["Software Design","Linear Algebra"],
+    "17,58": ["Software Design", "Linear Algebra"],
     "17,94": [],
     "17,25": [],
     "58,94": ["Economics"],
@@ -62,7 +62,7 @@ const expected2 = {
     "2,0": [],
     "2,1": [],
     "3,0": [],
-    "3,1": ["Course 1","Course 2"],
+    "3,1": ["Course 1", "Course 2"],
     "3,2": [],
     "4,0": [],
     "4,1": [],
@@ -84,7 +84,7 @@ function deepEqualUnorderedPairs(actual, expected) {
     const seen = new Set();
     // for every key in actual, find a matching key in expected
     for (const key of Object.keys(actual)) {
-        const [x,y] = key.split(",");
+        const [x, y] = key.split(",");
         const rev = `${y},${x}`;
         const valA = actual[key];
         let valB = null, matchKey = null;
@@ -106,7 +106,7 @@ function deepEqualUnorderedPairs(actual, expected) {
     }
     // ensure expected has no extra keys
     for (const key of Object.keys(expected)) {
-        const [x,y] = key.split(",");
+        const [x, y] = key.split(",");
         const rev = `${y},${x}`;
         if (!seen.has(key) && !seen.has(rev)) {
             return false;
@@ -117,9 +117,9 @@ function deepEqualUnorderedPairs(actual, expected) {
 
 //── run the tests ─────────────────────────────────────────────────────────────
 const tests = [
-    { name: "Sample 1", enrollments: enrollments1, expected: expected1 },
-    { name: "Sample 2", enrollments: enrollments2, expected: expected2 },
-    { name: "Sample 3", enrollments: enrollments3, expected: expected3 },
+    {name: "Sample 1", enrollments: enrollments1, expected: expected1},
+    {name: "Sample 2", enrollments: enrollments2, expected: expected2},
+    {name: "Sample 3", enrollments: enrollments3, expected: expected3},
 ];
 
 function runTests() {

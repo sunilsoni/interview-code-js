@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 function Counter() {
     const [value, setValue] = useState(0);
@@ -12,7 +12,7 @@ function Counter() {
 }
 
 export function Preview() {
-    return <Counter />;
+    return <Counter/>;
 }
 
 export default Counter;

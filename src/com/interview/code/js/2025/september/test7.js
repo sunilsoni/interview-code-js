@@ -15,14 +15,14 @@ function searchValue(numbers, value) {
 
 function test() {
     const tests = [
-        { input: [[7, 1, 3, 5, 8, 7, 61, 8], 8], expected: [1, 0, 1, 0] },
-        { input: [[2, 4, 6, 8, 10, 12], 6], expected: [1, 0, 1, 0] },
-        { input: [[1, 2, 3, 4, 5, 6, 7, 8], 2], expected: [0, 1, 1, 0] },
-        { input: [[5, 5, 5, 5, 5, 5], 5], expected: [1, 1, 1, 1] },
-        { input: [[10, 20, 30, 40, 50, 60], 100], expected: [0, 0, 0, 0] }
+        {input: [[7, 1, 3, 5, 8, 7, 61, 8], 8], expected: [1, 0, 1, 0]},
+        {input: [[2, 4, 6, 8, 10, 12], 6], expected: [1, 0, 1, 0]},
+        {input: [[1, 2, 3, 4, 5, 6, 7, 8], 2], expected: [0, 1, 1, 0]},
+        {input: [[5, 5, 5, 5, 5, 5], 5], expected: [1, 1, 1, 1]},
+        {input: [[10, 20, 30, 40, 50, 60], 100], expected: [0, 0, 0, 0]}
     ];
     const largeArray = Array(20).fill(8);
-    tests.push({ input: [largeArray, 8], expected: [1, 1, 1, 1] });
+    tests.push({input: [largeArray, 8], expected: [1, 1, 1, 1]});
 
     for (let i = 0; i < tests.length; i++) {
         const result = searchValue(...tests[i].input);

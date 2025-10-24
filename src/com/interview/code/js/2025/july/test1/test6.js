@@ -21,7 +21,9 @@ describe('requestLogger middleware', () => {
         console.log = console._origLog;
     });
 
-    beforeEach(() => { logs.length = 0; });
+    beforeEach(() => {
+        logs.length = 0;
+    });
 
     it('logs method and URL and does not alter response', async () => {
         const response = await request(app).get('/test?foo=bar');

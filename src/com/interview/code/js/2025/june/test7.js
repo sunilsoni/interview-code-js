@@ -21,9 +21,9 @@ if (maxLabel > M) M = maxLabel;
  */
 function marchingBand(N, H, M, K) {
     // build an array of positions for each label 1…M
-    const pos = Array.from({ length: M + 1 }, () => []);
+    const pos = Array.from({length: M + 1}, () => []);
     for (let i = 0; i < N; i++) {
-        pos[ H[i] ].push(i);
+        pos[H[i]].push(i);
     }
 
     let best = 0;
@@ -35,9 +35,9 @@ function marchingBand(N, H, M, K) {
         for (let j = 0; j < A.length; j++) {
             // shrink left until “bad” ≤ K
             while (true) {
-                const span  = A[j] - A[i] + 1;
+                const span = A[j] - A[i] + 1;
                 const goods = j - i + 1;
-                const bad   = span - goods;
+                const bad = span - goods;
                 if (bad <= K) break;
                 i++;
             }
@@ -52,20 +52,20 @@ console.log(marchingBand(N, houses, M, K));
 
 if (require.main === module) {
     const tests = [
-        { in: [10, [1,2,2,1,1,1,2,1,1,2], 2, 2], out: 5 },
-        { in: [6,  [1,1,2,2,2,1],       2, 1], out: 4 },
-        { in: [6,  [3,3,2,2,2,3],       3, 2], out: 5 },
+        {in: [10, [1, 2, 2, 1, 1, 1, 2, 1, 1, 2], 2, 2], out: 5},
+        {in: [6, [1, 1, 2, 2, 2, 1], 2, 1], out: 4},
+        {in: [6, [3, 3, 2, 2, 2, 3], 3, 2], out: 5},
         // no removals → longest run is 1
-        { in: [10, [1,2,1,2,1,2,1,2,1,2], 2, 0], out: 1 },
+        {in: [10, [1, 2, 1, 2, 1, 2, 1, 2, 1, 2], 2, 0], out: 1},
         // all same
-        { in: [10, Array(10).fill(5),   5, 2], out: 10 }
+        {in: [10, Array(10).fill(5), 5, 2], out: 10}
     ];
 
     let okAll = true;
-    for (const {in: [n,h,m,k], out} of tests) {
-        const got = marchingBand(n,h,m,k);
+    for (const {in: [n, h, m, k], out} of tests) {
+        const got = marchingBand(n, h, m, k);
         const pass = got === out;
-        console.log(`expected ${out}, got ${got} → ${pass?'PASS':'FAIL'}`);
+        console.log(`expected ${out}, got ${got} → ${pass ? 'PASS' : 'FAIL'}`);
         okAll &&= pass;
     }
     console.log(okAll ? '✅ All pass' : '❌ Some fail');

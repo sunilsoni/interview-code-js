@@ -8,9 +8,9 @@
  */
 function marchingBand(N, H, M, K) {
     // 1) build position lists
-    const pos = Array.from({ length: M + 1 }, () => []);
+    const pos = Array.from({length: M + 1}, () => []);
     for (let i = 0; i < N; i++) {
-        pos[ H[i] ].push(i);
+        pos[H[i]].push(i);
     }
 
     let answer = 0;
@@ -25,9 +25,9 @@ function marchingBand(N, H, M, K) {
             // expand j
             // now shrink i while bad > K
             while (true) {
-                const span  = A[j] - A[i] + 1;      // total width
+                const span = A[j] - A[i] + 1;      // total width
                 const goods = j - i + 1;           // count of this house
-                const bad   = span - goods;        // others to remove
+                const bad = span - goods;        // others to remove
                 if (bad <= K) break;
                 i++;
             }
@@ -42,43 +42,43 @@ function marchingBand(N, H, M, K) {
 function runTests() {
     const tests = [
         {
-            in: { N:10, H:[1,2,2,1,1,1,2,1,1,2], M:2,  K:2 },
+            in: {N: 10, H: [1, 2, 2, 1, 1, 1, 2, 1, 1, 2], M: 2, K: 2},
             out: 5
         },
         {
-            in: { N:6,  H:[1,1,2,2,2,1],       M:2,  K:1 },
+            in: {N: 6, H: [1, 1, 2, 2, 2, 1], M: 2, K: 1},
             out: 4
         },
         {
-            in: { N:6,  H:[3,3,2,2,2,3],       M:3,  K:2 },
+            in: {N: 6, H: [3, 3, 2, 2, 2, 3], M: 3, K: 2},
             out: 5
         },
         {
-            in: { N:8,  H:[1,2,3,4,5,6,7,8],   M:8,  K:0 },
+            in: {N: 8, H: [1, 2, 3, 4, 5, 6, 7, 8], M: 8, K: 0},
             out: 1
         },
         {
-            in: { N:5,  H:[1,1,1,1,1],         M:1,  K:2 },
+            in: {N: 5, H: [1, 1, 1, 1, 1], M: 1, K: 2},
             out: 5
         }
     ];
 
     let allPass = true;
     console.log('\n– deterministic tests –');
-    tests.forEach(({in:i, out}, idx) => {
+    tests.forEach(({in: i, out}, idx) => {
         const got = marchingBand(i.N, i.H, i.M, i.K);
-        const ok  = got === out;
+        const ok = got === out;
         allPass &&= ok;
         console.log(
-            `#${idx+1}: expected ${out}, got ${got} → ${ok ? 'PASS':'FAIL'}`
+            `#${idx + 1}: expected ${out}, got ${got} → ${ok ? 'PASS' : 'FAIL'}`
         );
     });
 
     // large random stress
     console.log('\n– large random stress test –');
     const N = 100_000, M = 100, K = 500;
-    const H = Array.from({length:N},
-        () => Math.floor(Math.random()*M)+1
+    const H = Array.from({length: N},
+        () => Math.floor(Math.random() * M) + 1
     );
     const t0 = Date.now();
     const ans = marchingBand(N, H, M, K);

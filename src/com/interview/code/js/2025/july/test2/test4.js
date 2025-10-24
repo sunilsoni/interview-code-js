@@ -45,7 +45,7 @@ class PoliceSystem {
     // Compute overlap in minutes between two intervals
     calculateOverlapMinutes(start1, end1, start2, end2) {
         const overlapStart = Math.max(start1, start2); // later of the two starts
-        const overlapEnd =   Math.min(end1,   end2);   // earlier of the two ends
+        const overlapEnd = Math.min(end1, end2);   // earlier of the two ends
         return Math.max(0, overlapEnd - overlapStart); // positive overlap or zero
     }
 
@@ -68,7 +68,7 @@ class PoliceSystem {
             relevant.forEach(d => {
                 total += this.calculateOverlapMinutes(
                     shift.startTime, shift.endTime,
-                    d.startTime,      d.endTime
+                    d.startTime, d.endTime
                 );
             });
         });
@@ -87,12 +87,12 @@ function main() {
 
     // Shifts for officer1
     sys.addShift(new Shift(1, "officer1", "vehicle1", 11 * 60, 15 * 60)); // 11:00–15:00 → [660,900]
-    sys.addShift(new Shift(2, "officer1", "vehicle2",  6 * 60,  9 * 60)); //  6:00–09:00 → [360,540]
+    sys.addShift(new Shift(2, "officer1", "vehicle2", 6 * 60, 9 * 60)); //  6:00–09:00 → [360,540]
 
     // Dispatches (calls)
-    sys.addDispatch(new Dispatch(1, "vehicle1", "call1",  9 * 60, 12 * 60)); //  9:00–12:00 → [540,720]
-    sys.addDispatch(new Dispatch(2, "vehicle2", "call2",  2 * 60,  5 * 60)); //  2:00–05:00 → [120,300]
-    sys.addDispatch(new Dispatch(3, "vehicle2", "call3",  7 * 60, 10 * 60)); //  7:00–10:00 → [420,600]
+    sys.addDispatch(new Dispatch(1, "vehicle1", "call1", 9 * 60, 12 * 60)); //  9:00–12:00 → [540,720]
+    sys.addDispatch(new Dispatch(2, "vehicle2", "call2", 2 * 60, 5 * 60)); //  2:00–05:00 → [120,300]
+    sys.addDispatch(new Dispatch(3, "vehicle2", "call3", 7 * 60, 10 * 60)); //  7:00–10:00 → [420,600]
 
     // Run the calculation
     const result = sys.calculateOfficerCallTime("officer1");

@@ -1,5 +1,5 @@
 <!-- dynamic-form.component.html -->
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
     <div *ngFor="let elem of formElements">
         <!-- derive controlName from label -->
         <ng-container [ngSwitch]="elem.type">
@@ -8,60 +8,60 @@
             <ng-container *ngSwitchCase="'text'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="text"
                         [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
                         [placeholder]="elem.placeholder"
                         [required]="elem.required"
+                        type="text"
                 />
             </ng-container>
 
             <ng-container *ngSwitchCase="'email'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="email"
                         [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
                         [placeholder]="elem.placeholder"
                         [required]="elem.required"
+                        type="email"
                 />
             </ng-container>
 
             <ng-container *ngSwitchCase="'password'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="password"
+                        [attr.minlength]="elem.minLength"
                         [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
                         [placeholder]="elem.placeholder"
                         [required]="elem.required"
-                        [attr.minlength]="elem.minLength"
+                        type="password"
                 />
             </ng-container>
 
             <ng-container *ngSwitchCase="'date'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="date"
                         [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
                         [required]="elem.required"
+                        type="date"
                 />
             </ng-container>
 
             <ng-container *ngSwitchCase="'number'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="number"
                         [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
-                        [min]="elem.min"
                         [max]="elem.max"
+                        [min]="elem.min"
                         [required]="elem.required"
+                        type="number"
                 />
             </ng-container>
 
             <ng-container *ngSwitchCase="'file'">
                 <label>{{elem.label}}</label>
                 <input
-                        type="file"
-                        [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
                         [attr.accept]="elem.accept?.join(',')"
+                        [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
+                        type="file"
                 />
             </ng-container>
 
@@ -77,8 +77,8 @@
             <ng-container *ngSwitchCase="'checkbox'">
                 <label>
                     <input
-                            type="checkbox"
                             [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
+                            type="checkbox"
                     /> {{elem.label}}
                 </label>
             </ng-container>
@@ -89,9 +89,9 @@
                 <div *ngFor="let opt of elem.options">
                     <label>
                         <input
-                                type="radio"
-                                [value]="opt"
                                 [formControlName]="elem.label.replace(/\s+/g,'').toLowerCase()"
+                                [value]="opt"
+                                type="radio"
                         /> {{opt}}
                     </label>
                 </div>
@@ -110,8 +110,8 @@
             <!-- submit -->
             <ng-container *ngSwitchCase="'submit'">
                 <button
-                        type="submit"
                         [ngClass]="elem.style"
+                        type="submit"
                 >
                     {{elem.label}}
                 </button>

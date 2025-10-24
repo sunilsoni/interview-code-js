@@ -14,22 +14,22 @@ function minimumDays(N, K, D) {
 function runTests() {
     const tests = [
         // sample from prompt
-        { N: 16, K: 2,  D: 10, expected: 2 },
+        {N: 16, K: 2, D: 10, expected: 2},
         // impossible because box too small
-        { N: 1,  K: 2,  D: 10, expected: -1 },
+        {N: 1, K: 2, D: 10, expected: -1},
         // exact fit, no Sundays in 6 days
-        { N: 5,  K: 1,  D: 6,  expected: 2 },
+        {N: 5, K: 1, D: 6, expected: 2},
         // covers one Sunday, openDays = 13
-        { N: 10, K: 1,  D: 14, expected: 2 },
+        {N: 10, K: 1, D: 14, expected: 2},
         // large-input case
-        { N: 100, K: 1, D: 1000, expected: Math.ceil((1*1000)/100) },
+        {N: 100, K: 1, D: 1000, expected: Math.ceil((1 * 1000) / 100)},
     ];
 
     tests.forEach(({N, K, D, expected}, i) => {
         const actual = minimumDays(N, K, D);
         const result = actual === expected ? 'PASS' : 'FAIL';
         console.log(
-            `Test ${i+1}: N=${N},K=${K},D=${D} → got ${actual}, ` +
+            `Test ${i + 1}: N=${N},K=${K},D=${D} → got ${actual}, ` +
             `expected ${expected} → ${result}`
         );
     });
