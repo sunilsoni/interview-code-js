@@ -1,79 +1,45 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService } from '../book.service';
-import { LoggerService } from '../logger.service';
-import { SearchService } from '../search.service';
+// Function to find maximum recurring character
+function maxRecurringChar(str) {
+    const freq = {}; // store frequency of each character
+    let maxChar = '';
+    let maxCount = 0;
 
-@Component({
-    selector: 'app-book-list',
-    templateUrl: './book-list.component.html',
-    styleUrls: ['./book-list.component.css']
-})
-export class BookListComponent implements OnInit {
-    books: { title: string; author: string }[] = [];
-    newBook = { title: '', author: '' };
-    searchQuery: string = '';
-    isSearching = false;
-    searchResults: { title: string; author: string }[] = [];
+    for (let char of str) {
+        freq[char] = (freq[char] || 0) + 1;
 
-    constructor(
-        private bookService: BookService,
-    private loggerService: LoggerService,
-    private searchService: SearchService
-) {}
+        // update maxChar if current char count is greater
+        if (freq[char] > maxCount) {
+            maxChar = char;
+            maxCount = freq[char];
+        }
+    }
 
-ngOnInit(): void {
-    this.books = this.bookService.getAllBooks();
+    return { char: maxChar, count: maxCount };
 }
 
-addBook(): void {
-    const title = this.newBook.title?.trim();
-    const author = this.newBook.author?.trim();
+// ✅ Test runner
+function runTests() {
+    const testCases = [
+        { input: "chamala", expected: { char: "a", count: 3 } },
+        { input: "banana", expected: { char: "a", count: 3 } },
+        { input: "abc", expected: { char: "a", count: 1 } },
+        { input: "aabbcc", expected: { char: "a", count: 2 } }, // tie case
+        { input: "", expected: { char: "", count: 0 } }, // empty string
+        { input: "zzzzzz", expected: { char: "z", count: 6 } }, // large repeat
+    ];
 
-    if (!title || !author) {
-    this.loggerService.logError('Title and author are required');
-    return;
+    for (let i = 0; i < testCases.length; i++) {
+        const { input, expected } = testCases[i];
+        const result = maxRecurringChar(input);
+
+        const pass = result.char === expected.char && result.count === expected.count;
+        console.log(`Test ${i + 1}: ${pass ? "PASS ✅" : "FAIL ❌"} | Input: "${input}" | Output:`, result);
+    }
+
+    // 🔥 Large data test
+    const largeInput = "a".repeat(1000000) + "b".repeat(500000);
+    const largeResult = maxRecurringChar(largeInput);
+    console.log("Large Data Test:", largeResult);
 }
 
-this.bookService.addBook({ title, author });
-this.loggerService.logInfo(`Added ${title}`);
-this.books = this.bookService.getAllBooks();
-this.newBook = { title: '', author: '' };
-}
-
-removeBook(index: number): void {
-    const current = this.bookService.getAllBooks();
-
-    if (index < 0 || index >= current.length) {
-    this.loggerService.logError('Tried to remove non-existing book');
-    return;
-}
-
-const removedTitle = current[index].title;
-this.bookService.removeBook(index);
-this.loggerService.logInfo(`Removed ${removedTitle}`);
-this.books = this.bookService.getAllBooks();
-}
-
-searchBooks(): void {
-    const query = this.searchQuery ?? '';
-
-    if (!query.trim()) {
-    this.searchResults = [];
-    return;
-}
-
-this.isSearching = true;
-this.searchResults = [];
-
-this.searchService
-    .searchBooks(query)
-    .then(results => {
-        this.searchResults = results;
-        this.isSearching = false;
-    })
-    .catch(() => {
-        this.loggerService.logError('Search failed');
-        this.isSearching = false;
-    });
-}
-}
+runTests();
