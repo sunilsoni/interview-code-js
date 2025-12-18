@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="employeeList"></ul>
+
+<script>
+    const employees = [
+    { id: 1, name: "Sunil", role: "Developer" },
+    { id: 2, name: "Priya", role: "Manager" },
+    { id: 3, name: "Amit", role: "Designer" },
+    { id: 4, name: "Neha", role: "Tester" }
+    ];
+
+    const ul = document.getElementById("employeeList");
+
+    for (let i = 0; i < employees.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = employees[i].name + " - " + employees[i].role;
+
+    li.onclick = function () {
+    console.log(employees[i]);
+};
+
+    ul.appendChild(li);
+}
+</script>
+
+</body>
+</html>

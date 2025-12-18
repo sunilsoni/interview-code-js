@@ -1,83 +1,66 @@
-// queue.js
-const { EventEmitter } = require('events');
+const esc = (s = "") => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-class AsyncQueue extends EventEmitter {
-    constructor() {
-        super();
-        this._queue = [];
-        this._interval = 250; // default interval in ms
-        this._timer = null;
+export const getSimilarApartments = async (req, res) => {
+    try {
+        const { id } = req.params;
 
-        // Listen for interval change events
-        this.on('interval', (newInterval) => {
-            if (typeof newInterval === 'number' && newInterval > 0) {
-                this._interval = newInterval;
-                if (this._timer) {
-                    clearInterval(this._timer);
-                    this._timer = null;
-                    this._startTimer();
-                }
-            }
-        });
+        const base = await collection.findOne({ _id: new ObjectId(id) });
+        if (!base) return res.status(404).json({ error: "Apartment not found" });
+
+        const basePrice = Number(base.price || 0);
+        const baseGuests = Number(base.maxGuests || 0);
+        const baseAmenities = Array.isArray(base.amenities) ? base.amenities : [];
+
+        const parts = String(base.address || "")
+            .split(",")
+            .map((x) => x.trim())
+            .filter(Boolean);
+        const city = parts[1] || parts[0] || "";
+
+        const or = [];
+        if (city) or.push({ address: { $regex: esc(city), $options: "i" } });
+        if (baseAmenities.length) or.push({ amenities: { $in: baseAmenities } });
+
+        const priceMin = basePrice ? Math.max(0, basePrice * 0.5) : 0;
+        const priceMax = basePrice ? basePrice * 1.5 : Number.MAX_SAFE_INTEGER;
+
+        const candidates = await collection
+            .find({
+                _id: { $ne: new ObjectId(id) },
+                price: { $gte: priceMin, $lte: priceMax },
+                ...(or.length ? { $or: or } : {}),
+            })
+            .limit(50)
+            .toArray();
+
+        const score = (a) => {
+            const p = Number(a.price || 0);
+            const g = Number(a.maxGuests || 0);
+            const am = Array.isArray(a.amenities) ? a.amenities : [];
+
+            const amenityHit =
+                baseAmenities.length && am.length
+                    ? baseAmenities.filter((x) => am.includes(x)).length / Math.max(baseAmenities.length, am.length)
+                    : 0;
+
+            const priceSim =
+                basePrice && p ? 1 - Math.min(1, Math.abs(basePrice - p) / Math.max(basePrice, p)) : 0;
+
+            const guestSim =
+                baseGuests || g ? 1 - Math.min(1, Math.abs(baseGuests - g) / Math.max(baseGuests || 1, g || 1)) : 0;
+
+            const locSim = city && new RegExp(esc(city), "i").test(String(a.address || "")) ? 1 : 0;
+
+            return Number((0.4 * locSim + 0.3 * amenityHit + 0.2 * priceSim + 0.1 * guestSim).toFixed(4));
+        };
+
+        const results = candidates
+            .map((a) => ({ ...a, similarityScore: score(a) }))
+            .sort((x, y) => y.similarityScore - x.similarityScore);
+
+        res.status(200).json(results);
+    } catch (error) {
+        console.error("Error fetching similar apartments:", error);
+        res.status(500).json({ error: "Failed to fetch similar apartments." });
     }
-
-    // Validate and add item to queue, emit "enqueued"
-    enqueue(item) {
-        const t = typeof item;
-        const isValid =
-            (t === 'number' && !Number.isNaN(item)) ||
-            t === 'string' ||
-            (t === 'object' && item !== null);
-
-        if (!isValid) {
-            throw new Error('Invalid item type');
-        }
-
-        this._queue.push(item);
-        this.emit('enqueued', item);
-    }
-
-    // Return item at head without removing
-    peek() {
-        return this._queue[0];
-    }
-
-    // Return current queue as array
-    print() {
-        return this._queue.slice();
-    }
-
-    // Return current dequeue interval
-    getCurrentInterval() {
-        return this._interval;
-    }
-
-    // Start dequeueing process
-    start() {
-        if (this._timer) return;
-        this._startTimer();
-    }
-
-    // Internal: create the interval timer
-    _startTimer() {
-        if (this._timer) return;
-
-        this._timer = setInterval(() => {
-            if (this._queue.length > 0) {
-                const item = this._queue.shift();
-                this.emit('dequeued', item);
-            }
-            // If queue is empty, do nothing but keep listening for new items
-        }, this._interval);
-    }
-
-    // Pause dequeueing (but still allow enqueue)
-    pause() {
-        if (this._timer) {
-            clearInterval(this._timer);
-            this._timer = null;
-        }
-    }
-}
-
-module.exports = AsyncQueue;
+};
