@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; }
+
+        /* Two-column layout */
+        .layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* Left is 3x wider than right */
+            height: 100vh;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Left rail: Detailed view */
+        .left-rail { padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .left-rail img { max-width: 100%; max-height: 400px; object-fit: contain; }
+
+        /* Right rail: Scrollable thumbnails */
+        .right-rail { overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .right-rail img { width: 100%; cursor: pointer; border-radius: 4px; transition: opacity 0.2s; }
+        .right-rail img:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <div class="left-rail" id="details-view">Loading...</div>
+    <div class="right-rail" id="thumbnail-list"></div>
+</div>
+
+<script>
+    // Use a free dummy API for the exercise
+    const API_URL = 'https://dummyjson.com/products?limit=15';
+
+    // Renders the detailed view in the left column
+    const renderDetails = ({ title, description, price, rating, images }) => {
+        document.getElementById('details-view').innerHTML = `
+        <img src="${images[0]}" alt="${title}" />
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <h3>Price: $${price}</h3>
+        <p><strong>Rating:</strong> ⭐ ${rating} / 5</p>
+      `;
+    };
+
+    // Fetches data and initializes the UI
+    const initApp = async () => {
+        try {
+            const response = await fetch(API_URL);
+            const { products } = await response.json();
+
+            // Render all thumbnails into the right rail
+            document.getElementById('thumbnail-list').innerHTML = products.map((product, index) =>
+                `<img src="${product.thumbnail}" alt="thumbnail" onclick='selectProduct(${index})' />`
+            ).join('');
+
+            // Expose a global function so the inline onclick handlers can access the specific product
+            window.selectProduct = (index) => renderDetails(products[index]);
+
+            // Auto-load the first product into the details view if products exist
+            if (products.length > 0) {
+                selectProduct(0);
+            }
+        } catch (error) {
+            document.getElementById('details-view').innerHTML = `<p>Error loading products.</p>`;
+        }
+    };
+
+    initApp();
+</script>
+</body>
+</html>

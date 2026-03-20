@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui; background: #f5f5f5; }
+
+.container { display: flex; height: 100vh; gap: 8px; padding: 8px; }
+
+.left-rail { flex: 3; background: #fff; border-radius: 8px; padding: 24px; overflow-y: auto; }
+.left-rail .placeholder { color: #999; text-align: center; margin-top: 40vh; }
+.left-rail .detail-img { width: 100%; max-height: 400px; object-fit: contain; }
+.left-rail h2 { margin: 12px 0 4px; }
+.left-rail .price { color: #b12704; font-size: 1.3rem; margin: 4px 0; }
+.left-rail .rating { color: #de7921; }
+.left-rail .description { color: #333; line-height: 1.5; margin-top: 8px; }
+
+.right-rail { flex: 1; background: #fff; border-radius: 8px; padding: 8px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.thumb-card { cursor: pointer; border: 2px solid transparent; border-radius: 8px; padding: 4px; }
+.thumb-card:hover, .thumb-card.active { border-color: #de7921; }
+.thumb-card img { width: 100%; height: 100px; object-fit: contain; }
+.thumb-title { font-size: .75rem; text-align: center; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
